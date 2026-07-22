@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROOTS PROTEIN - Blog</title>
+    <link rel="stylesheet" href="css/blog.css"> 
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Enlace de fuentes limpio en una sola línea -->
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..
+    800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playball&display=swap"rel="stylesheet"> 
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body>
+  
+
+    <header class="cabecera">
+    <div class="menu">
+        <a href="index.html">
+            <img src="imagenes/LOGOCOMPLETO2.png" alt="Roots Logo">
+        </a>
+        
+        <nav class="botones">
+            <a href="nosotros.html" class="enlaces">NOSOTROS</a>
+            <a href="categoria.html" class="enlaces">PRODUCTOS</a>
+            <a href="blog.html" class="enlaces">BLOG</a>
+            <a href="contactos.html" class="enlaces">CONTACTOS</a>
+        </nav>
+    </div>
+</header>  
+
+
+    <!-- =================================================== -->
+    <!-- ESTILOS UNIFICADOS Y RESPONSIVE (CORREGIDOS)        -->
+    <!-- =================================================== -->
+    <style>
+         .cabecera {
+  background-color: #590902;
+  border-bottom: 1px solid #fffcf3;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  min-height: 90px;   /* asegura que no sea muy baja */
+}
+
+/* Contenedor principal */
+.menu {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1rem 2rem; /* aumenta el espacio vertical */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.menu img {
+  height: 50px;   /* ajusta según lo que quieras */
+  width: auto;
+  object-fit: contain;
+   display: block;
+    
+}
+
+/* Botones */
+.botones {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.enlaces {
+  text-decoration: none;
+  color: #fffcf3;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+ transform: translateX(-2px);
+}
+
+.enlaces:hover {
+  color: #fffcf3;
+  font-weight: 800;
+}
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+        .enlaces:hover {
+            opacity: 0.8;
+        }
+
+        /* === CONTENEDOR PRINCIPAL: ESPACIADOS PERFECTOS === */
+       
+        .articulo-container {
+            max-width: 850px; 
+            margin: 0 auto 50px auto !important; 
+            /* En PC, la cabecera es más baja: 110px de espacio es perfecto */
+            padding: 110px 25px 0 25px !important; 
+            font-family: 'Lato', sans-serif;
+            box-sizing: border-box;
+        }
+
+        .articulo-img-container { 
+            overflow: hidden; 
+            border-radius: 16px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            margin-bottom: 40px; 
+        }
+        .articulo-img { 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            transition: transform 0.5s ease, filter 0.5s ease; 
+            filter: brightness(0.95); 
+        }
+        .articulo-img-container:hover .articulo-img { 
+            transform: scale(1.04); 
+            filter: brightness(1.05); 
+        }
+        .btn-volver { 
+            color: #93bfa3; 
+            text-decoration: none; 
+            font-weight: bold; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px; 
+            transition: transform 0.2s ease; 
+            font-family: 'Lato', sans-serif;
+        }
+        .btn-volver:hover { 
+            transform: translateX(-5px); 
+            filter: brightness(0.85); 
+        }
+
+        /* === PIE DE PÁGINA RESPONSIVE === */
+        .footer-final {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            gap: 30px;
+            padding: 40px 20px;
+        }
+
+       /* === AJUSTES RESPONSIVOS MÓVILES === */
+        @media (max-width: 768px) {
+            .articulo-container {
+               
+                padding: 15px 20px 0 20px; 
+            }
+            .articulo-container section h1 {
+                font-size: 2rem !important; 
+                margin-top: 10px !important;
+            }
+            article p {
+                font-size: 1.05rem !important; 
+                line-height: 1.7 !important;
+            }
+            h2 {
+                font-size: 1.5rem !important; 
+            }
+            /* Footer ordenado verticalmente en móviles */
+            .footer-final {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .footer-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .articulo-container {
+                
+                padding-top: 15px ; 
+            }
+        }
+    </style>
+
+    <!-- =================================================== -->
+    <!-- CONTENIDO DEL ARTÍCULO                              -->
+    <!-- =================================================== -->
+    <main class="blog" style="margin-top: 0 !important; padding-top: 0 !important;">
+        
+        <div class="articulo-container">
+
+            <!-- TÍTULO PRINCIPAL Y SUBTÍTULO -->
+            <section style="margin: 0 0 35px 0; text-align: center;">
+                <h1 style="color: #93bfa3; font-family: 'Bricolage Grotesque', sans-serif; font-size: 2.8rem; margin: 10px 0 12px 0 !important; line-height: 1.2;">3 recetas saludables con proteína vegetal</h1>
+                <p style="color: #666; font-size: 0.95rem; margin: 0; font-style: italic;">Ideas rápidas para preparar desayunos y snacks llenos de sabor.</p>
+            </section>
+
+            <!-- CONTENEDOR DE IMAGEN CON EFECTO -->
+            <div class="articulo-img-container">
+                <img src="imagenes/blog11.png" alt="Recetas saludables con proteína Roots" class="articulo-img">
+            </div>
+
+            <!-- CONTENIDO DE RECETAS -->
+            <article style="font-size: 1.15rem; line-height: 1.9; color: #333; text-align: justify;">
+                
+                <h2 style="color: #93bfa3; font-family: 'Bricolage Grotesque', sans-serif; margin: 35px 0 15px 0; font-size: 1.8rem; border-left: 4px solid #93bfa3; padding-left: 15px;">1. Waffles de Maca y Avena Rápido</h2>
+                <p style="margin-bottom: 25px;">Combina en una licuadora 1 taza de avena licuada, 1 plátano maduro, un chorrito de bebida de almendras y una cucharada generosa de nuestra mezcla proteica Roots. Vierte la masa en una wafflera o sartén precalentada hasta dorar por ambos lados. Sírvelos acompañados de frutas de la estación.</p>
+
+                <h2 style="color: #93bfa3; font-family: 'Bricolage Grotesque', sans-serif; margin: 35px 0 15px 0; font-size: 1.8rem; border-left: 4px solid #93bfa3; padding-left: 15px;">2. Batido Energético Roots Post-Entreno</h2>
+                <p style="margin-bottom: 25px;">Licúa un vaso de agua o bebida vegetal fría, media cucharadita de maca en polvo, medio plátano congelado y tu medida de proteína vegetal pura. Este mix actúa como un recuperador muscular espectacular ideal para consumir tras tu rutina diaria.</p>
+
+                <h2 style="color: #93bfa3; font-family: 'Bricolage Grotesque', sans-serif; margin: 35px 0 15px 0; font-size: 1.8rem; border-left: 4px solid #93bfa3; padding-left: 15px;">3. Overnight Oats Proteico de Chía</h2>
+                <p style="margin-bottom: 25px;">En un frasco de vidrio, mezcla 4 cucharadas de avena entera, una cucharada de semillas de chía, tu porción proteica vegetal y cubre con leche de coco o almendras. Revuelve bien y déjalo reposar toda la noche en la refrigeradora. Amanecerá con una textura cremosa espectacular.</p>
+
+            </article>
+
+            <!-- ENLACE DE RETORNO -->
+            <div style="margin-top: 50px; border-top: 1px solid #eee; padding-top: 25px; margin-bottom: 10px;">
+                <a href="blog.html" class="btn-volver">← Volver al Blog</a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- =================================================== -->
+    <!-- PIE DE PÁGINA (ORIGINAL SIN ALTERACIONES)           -->
+    <!-- =================================================== -->
+    <footer class="footer-final">
+        <div class="footer-item">
+            <div class="icono-cuadro">
+                <img src="iconos/Ubicacionicono.png" alt="Ubicación">
+            </div>
+            <div>
+                <h3>DIRECCIÓN</h3>
+                <p>Calle las Avutardas 194,<br>Santa Anita</p>
+            </div>
+        </div>
+
+        <div class="footer-item">
+            <a href="https://api.whatsapp.com/send?phone=51924699821" target="_blank" class="icono-cuadro">
+                 <img src="iconos/Whasapicono.png" alt="WhatsApp">
+            </a>
+            <div>
+                <h3>WHATSAPP</h3>
+                <p>9545469636</p>
+            </div>
+        </div>
+
+        <div class="footer-item">
+            <div class="icono-cuadro">
+                <img src="iconos/Iconohorario.png" alt="Horario">
+            </div>
+            <div>
+                <h3>HORARIO</h3>
+                <p>L - V: 8:00 am - 8:00 pm</p>
+            </div>
+        </div>
+
+        <div class="footer-item">
+            <div>
+                <h3>SÍGUENOS</h3>
+                <div class="redes">
+                    <a href="https://www.instagram.com/rootsprotein?igsh=M3ZrOXl4bzcwenZu" target="_blank">
+                        <img src="iconos/IconoInstagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.tiktok.com/@rootsprotein?_r=1&_t=ZS-971VDxxP2qi" target="_blank">
+                        <img src="iconos/Tiktokicono.png" alt="TikTok">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="piedepagina">
+        DISEÑADORAS WEB - Jussely Baldeon - Raquel Garcia - Mafer Sanchez - Sujey Origuela 
+    </div>
+
+</body>
+</html>

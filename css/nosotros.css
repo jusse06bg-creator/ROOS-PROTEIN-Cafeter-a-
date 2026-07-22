@@ -1,0 +1,1010 @@
+/* Cabecera */
+body { 
+font-family: 'Lato', sans-serif; /* fuente principal */
+}
+
+.cabecera {
+  background-color: #590902;
+  border-bottom: 1px solid #fffcf3;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  min-height: 90px;   /* asegura que no sea muy baja */
+}
+
+/* Contenedor principal */
+.menu {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1rem 2rem; /* aumenta el espacio vertical */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.menu img {
+  height: 50px;   /* ajusta según lo que quieras */
+  width: auto;
+  object-fit: contain;
+   display: block;
+    
+}
+
+/* Botones */
+.botones {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.enlaces {
+  text-decoration: none;
+  color: #fffcf3;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+ transform: translateX(-2px);
+}
+
+.enlaces:hover {
+  color: #fffcf3;
+  font-weight: 800;
+}
+
+
+
+
+
+/* =====================================================================
+   PANEL DE CONTROL — TODO LO QUE PROBABLEMENTE QUIERAS CAMBIAR
+   está aquí arriba, en variables. No necesitas tocar el resto del
+   archivo para personalizar imágenes, colores o transparencias.
+   ===================================================================== */
+:root {
+
+  /* ---- Colores generales ---- */
+  --color-texto-oscuro: #2b1c14;
+  --color-marron: #4a2c1a;
+  --color-fondo-claro: #ffffff;
+  --tipodeletra:arial;
+
+  /* Colores de la barrita de cada valor (sección VALORES) */
+  --valor-color-1: #e8b13a; /* Solidaridad */
+  --valor-color-2: #d9534f; /* Compromiso */
+  --valor-color-3: #5a8f3c; /* Responsabilidad */
+  --valor-color-4: #6c4f9c; /* Trabajo en equipo */
+  --valor-color-5: #c96f2f; /* Perseverancia */
+
+  /* ---- SECCIÓN 1: NOSOTROS ---- */
+  /* Cambia la imagen de fondo aquí: reemplaza la ruta por la tuya,
+     por ejemplo: url("images/nosotros-bg.jpg") */
+  --nosotros-imagen: url(/imagenes/caliente.png);
+
+  /* Degradado/transparencia del velo oscuro sobre la imagen.
+     Sube o baja los valores de opacidad (0 a 1) para aclarar u
+     oscurecer. El degradado va de arriba (más oscuro) hacia abajo. */
+  --nosotros-velo-inicio: rgba(20, 20, 20, 0.55);
+  --nosotros-velo-fin: rgba(20, 20, 20, 0.25);
+
+  /* ---- SECCIÓN 5: NUESTRO EQUIPO ---- */
+  /* Fondo de la sección del equipo. Antes era negro; aquí lo puedes
+     dejar como color plano (déjalo así) o cambiar por una imagen
+     más abajo en "--equipo-imagen". */
+  --equipo-fondo-color: #f4efe9;   /* color claro en vez del negro original */
+  --equipo-texto-color: #2b1c14;  /* color del texto para que se lea bien */
+
+  /* Si prefieres una imagen de fondo en vez de color plano,
+     descomenta la siguiente línea y bórrale el "/*" y "*\/":
+     --equipo-imagen: url("images/equipo-bg.jpg");
+  */
+
+  /* Colores de las franjas de color de cada tarjeta del equipo */
+  --tarjeta-color-1: linear-gradient(135deg, #b03bd6, #6a3fd4);
+  --tarjeta-color-2: linear-gradient(135deg, #29b6d8, #1e6fd9);
+  --tarjeta-color-3: linear-gradient(135deg, #f2a93c, #e8622f);
+}
+
+/* =====================================================================
+   BASE / RESET GENERAL
+   ===================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:var(--tipodeletra);
+  color: var(--color-texto-oscuro);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--color-marron);
+}
+
+
+/* =====================================================================
+   SECCIÓN 1: NOSOTROS
+   ===================================================================== */
+.banner-nosotros{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    background-image:url("../imagenes/Fondo Roots Protein.jpg");
+
+    background-size:100% 100%;
+
+    background-repeat:no-repeat;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.nosotros-contenido{
+
+    width:70%;
+
+    max-width:900px;
+
+    text-align:center;
+
+    padding:60px;
+
+}
+
+.seccion-nosotros::before{
+  
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.15);
+
+}
+
+.contenido-nosotros{
+
+        position:relative;
+
+        z-index:2;
+}
+
+
+.overlay{
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.45);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+.overlay h1{
+
+    color:white;
+
+    font-size:80px;
+
+    letter-spacing:5px;
+
+    font-family:Georgia, serif;
+
+    text-shadow:4px 4px 10px rgba(0,0,0,.6);
+
+}
+
+.overlay p{
+
+    color:white;
+
+    width:70%;
+
+    font-size:30px;
+
+    line-height:1.7;
+
+    text-shadow:2px 2px 6px rgba(0,0,0,.6);
+
+}
+
+.banner-nosotros h1{
+
+    font-size:70px;
+    letter-spacing:5px;
+    margin-bottom:30px;
+
+}
+
+.banner-nosotros p{
+
+    font-size:24px;
+    line-height:45px;
+}
+
+.contenido-nosotros h1{
+
+    font-size:65px;
+
+    color:white;
+
+    font-weight:bold;
+
+    text-shadow:3px 3px 10px rgba(0,0,0,.5);
+
+    margin-bottom:25px;
+
+}
+
+.contenido-nosotros p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+
+}
+/* =====================================================================
+   SECCIÓN 2: NUESTRA HISTORIA
+   ===================================================================== */
+.seccion-historia {
+
+    width:100%;
+    aspect-ratio:16/9;
+
+    background-image:url("../imagenes/Fondo\ nuestra\ historia.png");
+
+    background-size:100% 100%;
+
+    background-repeat:no-repeat;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.seccion-historia h2{
+
+    font-size:58px;
+
+    color:#5a2f17;
+
+    font-family:"Playfair Display",serif;
+
+    margin-bottom:10px;
+
+}
+
+.seccion-historia h3{
+
+    color:#8a5c3c;
+
+    font-size:22px;
+
+    margin-bottom:25px;
+
+}
+
+.seccion-historia p{
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    color:#4b3d34;
+
+}
+
+.historia-contenido{
+
+    max-width:850px;
+
+    text-align:center;
+
+    transform: translateY(-40px);
+}
+
+.seccion-historia h2 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 58px;
+
+    color: #6F4E37;
+
+    margin-bottom: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+.seccion-historia h3 {
+
+  font-family: 'Lato', sans-serif;
+
+    font-size: 22px;
+
+    color: #4A403A;
+
+    font-weight: 400;
+
+    margin-bottom: 30px;
+
+}
+
+
+.seccion-historia p { 
+  
+   width: 90%;
+
+    font-family: 'Lato', sans-serif;
+
+    font-size: 19px;
+
+    line-height: 1.9;
+
+    color: #4A403A;
+} 
+
+.decoracion-izquierda {
+  top: 20px;
+  left: -20px;
+}
+
+.decoracion-derecha {
+  top: 20px;
+  right: -20px;
+}
+
+/* En pantallas pequeñas ocultamos las decoraciones para que no
+   estorben el texto */
+@media (max-width: 600px) {
+  .decoracion {
+    display: none;
+  }
+}
+
+
+/* =====================================================================
+   SECCIÓN 3: MISIÓN Y VISIÓN
+   ===================================================================== */
+.seccion-mision-vision {
+
+    width:100%;
+    aspect-ratio:16/9;
+    background-image:url("../imagenes/Fondo\ nuestra\ historia.png");
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 12%;
+
+}
+
+.mision, .vision {
+
+    width:420px;
+    text-align:center;
+    padding:40px;
+    backdrop-filter:blur(4px);
+
+}
+
+.mision{
+    transform: translateX(-40px);
+}
+
+.vision{
+    transform: translateX(40px);
+} 
+
+.icono-mv{
+
+    width:90px;
+
+    transition: all .4s ease;
+
+    display:inline-block;
+
+}
+
+.icono-mv:hover{
+
+    transform: scale(1.2);
+
+}
+
+.seccion-mision-vision h2 {
+
+   font-family:'Cormorant Garamond',serif;
+
+    font-size:48px;
+
+    color:#6F4E37;
+
+    margin-bottom:25px;
+}
+
+.seccion-mision-vision p {
+
+   font-family:'Lato',sans-serif;
+
+    font-size:19px;
+
+    line-height:1.9;
+
+    color:#4A403A;
+
+}
+
+.imagen-central{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.imagen-central img{
+    width:350px;       /* Cambia el tamaño si lo deseas */
+    max-width:100%;
+    transition:.4s;
+}
+
+.imagen-central img:hover{
+    transform:scale(1.05);
+}
+
+/* =====================================================================
+   SECCIÓN 4: VALORES
+   ===================================================================== */
+.seccion-valores {
+
+    width:100%;
+    aspect-ratio:16/9;
+
+    background-image:url("../imagenes/Fondo\ nuestra\ historia.png");
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    background-position:center;
+
+    padding:90px 12%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+    grid-template-areas:
+        "titulo titulo titulo"
+        "v1 v2 v3"
+        ". v4 v5";
+    
+}
+
+
+.seccion-valores > h2 {
+
+   grid-column:1 / -1;
+
+    text-align:center;
+
+    font-size:58px;
+
+    color:#6F4E37;
+
+    margin-bottom:30px;
+
+    grid-area: titulo;
+
+}
+
+.valor {
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    text-align:center;
+
+    padding:35px 25px;
+
+    min-height:320px;
+
+    background:rgba(255,255,255,.30);
+
+    backdrop-filter:blur(4px);
+
+    border-radius:18px;
+
+    transition:.4s;
+}
+
+.valor:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.icono-valor{
+
+    width:80px;
+
+    margin-bottom:25px;
+
+    transition:.4s;
+
+}
+
+.valor:hover .icono-valor{
+
+    transform:scale(1.15);
+}
+
+.valor h4 {
+
+    font-size:34px;
+
+    color:#6F4E37;
+
+    margin-bottom:20px;
+}
+
+.valor p {
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#4A403A;
+
+}
+
+
+
+.valor-1 { border-left-color: var(--valor-color-1); }
+.valor-2 { border-left-color: var(--valor-color-2); }
+.valor-3 { border-left-color: var(--valor-color-3); }
+.valor-4 { border-left-color: var(--valor-color-4); }
+.valor-5 { border-left-color: var(--valor-color-5); }
+
+
+/*=====================================================
+        NUESTRO EQUIPO
+======================================================*/
+
+.seccion-equipo{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    background-image:url("../imagenes/Fondo\ nuestra\ historia.png");
+
+    background-size:100% 100%;
+
+    background-repeat:no-repeat;
+
+    background-position:center;
+
+    padding:100px 8%;
+
+    text-align:center;
+}
+
+.seccion-equipo h2{
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:50px;
+    color:#6F4E37;
+
+    margin-bottom:90px;
+}
+
+.equipo-contenedor{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:55px;
+}
+
+.miembro{
+
+   width:260px;
+
+    background:white (255,255,255,.80);
+
+    padding:25px;
+
+    border-radius:25px;
+
+    backdrop-filter:blur(6px);
+
+    transition:.3s;
+}
+
+.miembro:hover{
+
+    transform:translateY(-8px);
+
+    background:white;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.foto-contenedor{
+
+    width:200px;
+    height:200px;
+
+    margin:auto;
+    position:relative;
+
+    border-radius:50%;
+}
+
+.foto-contenedor img{
+
+    width:100%;
+    height:100%;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    background:#ececec;
+
+    border:5px solid #FFF9F0;
+
+    transition:.4s;
+}
+
+.miembro:hover img{
+
+    transform:scale(1.08);
+}
+
+.numero{
+
+    position:absolute;
+
+    top:-20px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:55px;
+    height:55px;
+
+    border-radius:50%;
+
+    color: #FFF9F0;
+
+    font-size:28px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-weight:bold;
+
+    z-index:5;
+}
+
+/* Línea circular */
+
+.foto-contenedor::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    bottom:-18px;
+
+    transform:translateX(-50%);
+
+    width:220px;
+    height:110px;
+
+    border:3px solid;
+
+    border-top:none;
+
+    border-radius:0 0 120px 120px;
+}
+
+.circulo{
+
+    position:absolute;
+
+    bottom:-18px;
+
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+}
+
+.izquierda{
+
+    left:-4px;
+}
+
+.derecha{
+
+    right:-4px;
+}
+
+/*========== COLORES ==========*/
+
+.color1::after{
+
+    border-color:#6F4E37;
+}
+
+.color1 .numero{
+
+    background:#6F4E37;
+}
+
+.color1 .circulo{
+
+    background:#6F4E37;
+}
+
+.color1 img{
+
+    border-color:#6F4E37;
+}
+
+.color2::after{
+
+    border-color:#6F4E37;
+}
+
+.color2 .numero{
+
+    background:#6F4E37;
+}
+
+.color2 .circulo{
+
+    background:#6F4E37;
+}
+
+.color2 img{
+
+    border-color:#6F4E37;
+}
+
+.color3::after{
+
+    border-color:#6F4E37;
+}
+
+.color3 .numero{
+
+    background:#6F4E37;
+}
+
+.color3 .circulo{
+
+    background:#6F4E37;
+}
+
+.color3 img{
+
+    border-color:#6F4E37;
+}
+
+.color4::after{
+
+    border-color:#6F4E37;
+}
+
+.color4 .numero{
+
+    background:#6F4E37;
+}
+
+.color4 .circulo{
+
+    background:#6F4E37;
+}
+
+.color4 img{
+
+    border-color:#6F4E37;
+}
+
+.miembro h3{
+
+    margin-top:45px;
+
+    font-size:22px;
+
+    color:#6F4E37;
+
+    font-family:'Cormorant Garamond',serif;
+}
+
+.miembro h4{
+
+    margin:10px 0;
+
+    font-style:italic;
+
+    color:#56070c;
+
+    font-size:22px;
+}
+
+.miembro p{
+
+    color:#4A403A;
+
+    line-height:1.7;
+
+    font-size:17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-final{
+    background-color: #590902;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+}
+
+.footer-item{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-item h3{
+    color: white;
+    font-size: 18px;
+    margin: 0;
+}
+ 
+.footer-item p{
+    color: white;
+    font-size: 14px;
+    margin: 3px 0 0;
+}
+
+.icono-cuadro{
+    width: 45px;
+    height: 45px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    border-radius: 50%
+}
+
+.redes{
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.redes a{
+    width: 45px;
+    height: 45px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 50%
+}
+
+/* TAMAÑO DE LOS ICONOS PNG */
+.icono-cuadro img,
+
+.redes img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* EFECTO ZOOM */
+.icono-cuadro:hover,
+.redes a:hover{
+    transform: scale(1.15)
+    
+}
+
+
+
+
+
+
+
+
+.piedepagina{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fffcf3;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}

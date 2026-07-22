@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROOTS PROTEIN - Blog</title>
+    <link rel="stylesheet" href="css/blog.css"> 
+    <link rel="stylesheet" href="css/responsive.css">
+   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..
+    800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playball&display=swap" 
+    rel="stylesheet"> 
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <style>
+        /* ==========================================================================
+           1. TIPOGRAFÍA (Herencia natural sin forzar con !important)
+           ========================================================================== */
+        body {
+            font-family: 'Lato', sans-serif; /* Fuente base para toda la página */
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        .post-title, h1, .articulo-contenido h2, h2 {
+            font-family: 'lato', sans-serif; /* Solo para títulos */
+        }
+
+        /* ==========================================================================
+           2. CABECERA (NAVBAR ORIGINAL)
+           ========================================================================== */
+        .cabecera {
+            background-color: #93bfa3;
+            padding: 15px 40px;
+        }
+
+        .menu {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+            display: block;
+        }
+
+        .botones {
+            display: flex;
+            gap: 25px;
+        }
+
+        .enlaces {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            transition: opacity 0.2s ease;
+        }
+
+        .enlaces:hover {
+            opacity: 0.8;
+        }
+
+        /* ==========================================================================
+           3. SECCIÓN DEL ARTÍCULO (CONTENEDOR Y TEXTOS)
+           ========================================================================== */
+        .articulo-container {
+            max-width: 850px; 
+            margin: 0 auto 50px auto; 
+            padding: 50px 25px 0 25px; 
+        }
+
+        /* Título e Introducción */
+        .post-header {
+            margin: 0 0 35px 0; 
+            text-align: center;
+        }
+
+        .post-title {
+            color: #93bfa3; 
+            font-size: 2.8rem; 
+            margin: 0 0 16px 0; 
+            line-height: 1.2;
+        }
+
+        .post-intro {
+            color: #666666; 
+            font-size: 1.1rem; 
+            max-width: 700px; 
+            margin: 0 auto; 
+            line-height: 1.5; 
+            font-style: italic; 
+            font-weight: 300;
+        }
+
+        /* Contenedor de Imagen con Efecto de Zoom */
+        .articulo-img-container { 
+            overflow: hidden; 
+            border-radius: 16px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            margin-bottom: 40px; 
+        }
+
+        .articulo-img { 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            transition: transform 0.5s ease, filter 0.5s ease;
+            filter: brightness(0.95); 
+        }
+
+        .articulo-img-container:hover .articulo-img {
+            transform: scale(1.03);
+            filter: brightness(1.02);
+        }
+
+        /* Cuerpo del Blog */
+        .articulo-contenido {
+            font-size: 1.15rem; 
+            line-height: 1.9; 
+            color: #333333; 
+            text-align: justify;
+        }
+
+        .articulo-contenido p {
+            margin-bottom: 25px;
+        }
+
+        .articulo-contenido h2 {
+            color: #93bfa3; 
+            margin: 35px 0 15px 0; 
+            font-size: 1.8rem; 
+            border-left: 4px solid #93bfa3; 
+            padding-left: 15px;
+        }
+
+        /* Botón de Retorno */
+        .retorno-container {
+            margin-top: 50px; 
+            border-top: 1px solid #eeeeee; 
+            padding-top: 25px; 
+            margin-bottom: 10px;
+        }
+
+        .btn-volver { 
+            color: #93bfa3; 
+            text-decoration: none; 
+            font-weight: bold; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 8px; 
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        .btn-volver:hover {
+            transform: translateX(-5px);
+            color: #7da88c;
+        }
+
+        /* ==========================================================================
+           4. PIE DE PÁGINA (ESTILOS LIMPIOS)
+           ========================================================================== */
+        .footer-final {
+            background-color: #93bfa3; 
+            padding: 40px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex: 1 1 200px; 
+        }
+
+        /* Contenedor circular blanco de iconos de contacto */
+        .icono-cuadro {
+            background-color: #ffffff; 
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+            box-sizing: border-box;
+        }
+
+        .icono-cuadro:hover {
+            transform: scale(1.08);
+        }
+
+        /* Tamaño controlado para evitar desborde gigante */
+        .icono-cuadro img {
+            width: 26px;
+            height: 26px;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* Textos del footer */
+        .footer-item h3 {
+            color: #ffffff; 
+            font-weight: 700;
+            margin: 0 0 5px 0;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-item p {
+            margin: 0;
+            color: #ffffff; 
+            font-size: 0.9rem;
+            line-height: 1.4;
+            opacity: 0.9;
+        }
+
+        .redes {
+            display: flex;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        /* Contenedor circular blanco para redes sociales */
+        .redes a {
+            background-color: #ffffff; 
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        .redes a:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Tamaño de iconos de redes */
+        .redes img {
+            width: 22px;
+            height: 22px;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* Franja de Diseñadoras */
+        .piedepagina {
+            background-color: #faf6f0; 
+            color: #111111; 
+            text-align: center;
+            padding: 20px 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* ==========================================================================
+           5. REGLAS RESPONSIVAS
+           ========================================================================== */
+
+        /* --- Tablets y pantallas medianas (Menores a 768px) --- */
+        @media (max-width: 768px) {
+            .cabecera {
+                padding: 15px 20px;
+            }
+            .logo {
+                height: 42px;
+            }
+            .botones {
+                gap: 15px;
+            }
+            .enlaces {
+                font-size: 0.85rem;
+            }
+            .articulo-container { 
+                padding: 40px 20px 0 20px; 
+            }
+            .post-title { 
+                font-size: 2.2rem; 
+            }
+            .post-intro {
+                font-size: 1.05rem;
+            }
+            .articulo-contenido h2 {
+                font-size: 1.5rem;
+            }
+            .footer-final {
+                padding: 30px 20px;
+                gap: 25px;
+            }
+        }
+
+        /* --- Pantallas Móviles Intermedias (Menores a 500px) --- */
+        @media (max-width: 500px) {
+            .articulo-container {
+                padding-top: 60px; 
+            }
+            .menu {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .botones {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+            .enlaces {
+                font-size: 0.8rem;
+            }
+            .post-title { 
+                font-size: 1.8rem; 
+                line-height: 1.3;
+            }
+            .post-intro {
+                font-size: 0.95rem;
+            }
+            .articulo-contenido {
+                font-size: 1.05rem;
+                line-height: 1.7;
+                text-align: left; 
+            }
+            .articulo-contenido h2 {
+                font-size: 1.3rem;
+                padding-left: 10px;
+            }
+            .footer-final {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 30px;
+            }
+            .footer-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+            }
+            .redes {
+                justify-content: center;
+            }
+            .piedepagina {
+                font-size: 0.8rem;
+                line-height: 1.5;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABECERA (NAVBAR) -->
+    <header class="cabecera">
+        <div class="menu">
+            <img src="imagenes/LOGOCOMPLETO2.png" alt="rootsprotein" class="logo">
+            <nav class="botones">
+                <a href="#" class="enlaces">NOSOTROS</a>
+                <a href="categoria.html" class="enlaces">PRODUCTOS</a>
+                <a href="blog.html" class="enlaces">BLOG</a>
+                <a href="#" class="enlaces">CONTACTOS</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="blog">
+        <div class="articulo-container">
+
+            <!-- TÍTULO PRINCIPAL E INTRODUCCIÓN -->
+            <section class="post-header">
+                <h1 class="post-title">¿Por qué la proteína vegetal ayuda a una recuperación muscular más rápida?</h1>
+                <p class="post-intro">
+                    Descubre cómo la ciencia detrás de los nutrientes de origen vegetal optimiza la reconstrucción celular, reduce la fatiga y transforma tu rendimiento deportivo de manera natural.
+                </p>
+            </section>
+
+            <!-- CONTENEDOR DE IMAGEN -->
+            <div class="articulo-img-container">
+                <img src="imagenes/articulo1.png" alt="Recuperación muscular con proteína vegetal" class="articulo-img">
+            </div>
+
+            <!-- CONTENIDO REDACTADO -->
+            <article class="articulo-contenido">
+                
+                <p>Tras sesiones intensas de entrenamiento físico, las fibras musculares sufren microdesgarros naturales que requieren una reconstrucción oportuna. Existe el mito extendido de que solo las fuentes animales logran este proceso con velocidad; sin embargo, las proteínas de origen vegetal han demostrado ser aliadas excepcionales e incluso más eficientes en ciertos aspectos de la reparación metabólica.</p>
+
+                <h2>1. Digestión ligera y rápida absorción</h2>
+                <p>A diferencia de las proteínas animales densas, las alternativas de origen vegetal (como el guisante, el tarwi o las semillas) carecen de lactosa y grasas saturadas pesadas. Esto permite que el sistema gastrointestinal procese los nutrientes con menor gasto energético, enviando los aminoácidos al torrente sanguíneo de manera limpia y ágil hacia los músculos fatigados.</p>
+
+                <h2>2. Reducción del estrés oxidativo e inflamación</h2>
+                <p>Las plantas vienen acompañadas de un arsenal natural de antioxidantes y fitonutrientes. Al consumir proteína vegetal pura, no solo aportas bloques de construcción muscular, sino que mitigas activamente la inflamación sistémica post-ejercicio, lo que reduce sustancialmente el clásico dolor muscular del día siguiente (agujetas).</p>
+
+                <h2>3. El entorno alcalino óptimo</h2>
+                <p>Un cuerpo sometido a un gran esfuerzo tiende a acidificarse temporalmente. Las proteínas vegetales promueven un ph más alcalino en el organismo. Este balance interno favorece que los procesos enzimáticos de curación celular trabajen a su máxima capacidad, logrando que estés listo para tu siguiente entrenamiento en tiempo récord.</p>
+
+            </article>
+
+            <!-- ENLACE DE RETORNO -->
+            <div class="retorno-container">
+                <a href="blog.html" class="btn-volver">← Volver al Blog</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer-final">
+
+        <!-- DIRECCIÓN -->
+        <div class="footer-item">
+            <div class="icono-cuadro">
+                <img src="iconos/Ubicacionicono.png" alt="Ubicación">
+            </div>
+            <div>
+                <h3>DIRECCIÓN</h3>
+                <p>Calle las Avutardas 194,<br>Santa Anita</p>
+            </div>
+        </div>
+
+        <!-- WHATSAPP -->
+        <div class="footer-item">
+            <a href="https://api.whatsapp.com/send?phone=51924699821" target="_blank" class="icono-cuadro">
+                 <img src="iconos/Whasapicono.png" alt="WhatsApp">
+            </a>
+            <div>
+                <h3>WHATSAPP</h3>
+                <p>9545469636</p>
+            </div>
+        </div>
+
+        <!-- HORARIO -->
+        <div class="footer-item">
+            <div class="icono-cuadro">
+                <img src="iconos/Iconohorario.png" alt="Horario">
+            </div>
+            <div>
+                <h3>HORARIO</h3>
+                <p>L - V: 8:00 am - 8:00 pm</p>
+            </div>
+        </div>
+
+        <!-- REDES -->
+        <div class="footer-item">
+            <div>
+                <h3>SÍGUENOS</h3>
+                <div class="redes">
+                    <a href="https://www.instagram.com/rootsprotein?igsh=M3ZrOXl4bzcwenZu" target="_blank">
+                        <img src="iconos/IconoInstagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.tiktok.com/@rootsprotein?_r=1&_t=ZS-971VDxxP2qi" target="_blank">
+                        <img src="iconos/Tiktokicono.png" alt="TikTok">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- BARRA DE CRÉDITOS FINAL -->
+    <div class="piedepagina">
+        DISEÑADORAS WEB - Jussely Baldeon - Raquel Garcia - Mafer Sanchez - Sujey Origuela
+    </div>
+
+</body>
+</html>

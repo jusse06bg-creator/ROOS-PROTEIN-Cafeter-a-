@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROOTS PROTEIN</title>
+    <link rel="stylesheet" href="css/categoria.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playball&display=swap" rel="stylesheet"> 
+
+
+
+
+<body>
+  
+
+    <header class="cabecera">
+    <div class="menu">
+        <a href="index.html">
+            <img src="imagenes/LOGOCOMPLETO2.png" alt="Roots Logo">
+        </a>
+        
+        <nav class="botones">
+            <a href="nosotros.html" class="enlaces">NOSOTROS</a>
+            <a href="categoria.html" class="enlaces">PRODUCTOS</a>
+            <a href="blog.html" class="enlaces">BLOG</a>
+            <a href="contactos.html" class="enlaces">CONTACTOS</a>
+        </nav>
+    </div>
+</header>  
+
+
+
+
+
+
+
+
+
+
+
+  <section class="categorias-seccion">
+  <div class="categorias-contenedor">
+
+    <div class="categoria-item" onclick="mostrarCategoria('waffles')">
+      <div class="categoria-imagen">
+        <img src="imagenes/wafles.png" alt="Waffles">
+      </div>
+      <span class="categoria-etiqueta">Waffles</span>
+    </div>
+
+    <div class="categoria-item" onclick="mostrarCategoria('teas')">
+      <div class="categoria-imagen">
+        <img src="imagenes/tea.png" alt="Teas">
+      </div>
+      <span class="categoria-etiqueta">Teas</span>
+    </div>
+
+<div class="categoria-item" onclick="mostrarCategoria('calientes')">
+        <div class="categoria-imagen">
+        <img src="imagenes/caliente.png" alt="Bebidas Calientes">
+      </div>
+      <span class="categoria-etiqueta">Bebidas Calientes</span>
+    </div>
+
+   <div class="categoria-item" onclick="mostrarCategoria('frappes')">
+      <div class="categoria-imagen">
+        <img src="imagenes/frapes.png" alt="Frappes">
+      </div>
+      <span class="categoria-etiqueta">Frappes</span>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="css/productos.css">
+</head>
+
+<body>
+
+ <div id="publicidad" class="publicidadcombo">
+    <img class="imagencombo" src="imagenes/publicidad.png" alt="publicidadcombo">
+</div>
+
+
+
+    
+<script>
+function mostrarCategoria(categoria) {
+
+    // Oculta la publicidad
+    document.getElementById("publicidad").style.display = "none";
+
+    // Oculta todos los productos
+    let productos = document.querySelectorAll(".productos");
+
+    productos.forEach(function(item) {
+        item.style.display = "none";
+    });
+
+    // Muestra la categoría seleccionada
+    document.getElementById(categoria).style.display = "block";
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="waffles" class="productos" style="display: none;">
+
+    <section class="contenedor_producto">
+
+        <!-- Imagen -->
+        <div class="contenedor_imagen_producto">
+
+            <img
+                src="imagenes/oreo1wf.png"
+                alt="Waffle Proteico con Plátano y Oreo"
+                class="imagen_producto">
+
+        </div>
+
+        <!-- Información -->
+        <div class="informacion_producto">
+
+            <span class="etiqueta_categoria">
+                  20 g de proteína
+            </span>
+
+            <h1 class="nombre_producto">
+                OREO MADNESS
+                <br>
+            </h1>
+
+            <div class="contenedor_precio">
+
+                <span class="precio_producto">
+                    S/ 21.00
+                </span>
+
+                <span class="texto_unidad">
+                    por unidad
+                </span>
+
+            </div>
+
+            <hr class="linea_divisoria">
+
+            <h3 class="titulo_descripcion">
+                Descripción
+            </h3>
+
+            <p class="descripcion_producto">
+
+                Waffle de proteína elaborado con harina integral,
+                cubierto con rodajas de plátano fresco,
+                crema chantilly,
+                galleta Oreo
+                y sirope de chocolate.
+
+                Una combinación perfecta entre
+                sabor, energía y nutrición.
+
+            </p>
+
+            <button class="boton_ver_ingredientes">
+                Pedir Ahora 
+            </button>
+
+            </section>
+
+
+      
+
+            <section class="contenedor_producto">
+
+        <!-- Imagen -->
+        <div class="contenedor_imagen_producto">
+
+            <img
+                src="imagenes/chessewaflee.png"
+                alt="Waffle Proteico con Plátano y Oreo"
+                class="imagen_producto">
+
+        </div>
+
+        <!-- Información -->
+        <div class="informacion_producto">
+
+            <span class="etiqueta_categoria">
+                  20 g de proteína
+            </span>
+
+            <h1 class="nombre_producto">
+                CHEESE
+                <br>
+            </h1>
+
+            <div class="contenedor_precio">
+
+                <span class="precio_producto">
+                    S/ 20.00
+                </span>
+
+                <span class="texto_unidad">
+                    por unidad
+                </span>
+
+            </div>
+
+            <hr class="linea_divisoria">
+
+            <h3 class="titulo_descripcion">
+                Descripción
+            </h3>
+
+            <p class="descripcion_producto">
+
+                Waffle de base salada, terminado con queso
+                 parmesano y miel artesanal. Una fusión 
+                 irresistible entre notas saladas y dulces
+                  que deleita el paladar desde el primer bocado.
+            </p>
+
+            <button class="boton_ver_ingredientes">
+                Pedir Ahora 
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="contenedor_producto">
+
+        <!-- Imagen -->
+        <div class="contenedor_imagen_producto">
+
+            <img
+                src="imagenes/CLASSICwafles.png"
+                alt="Waffle Proteico con Plátano y Oreo"
+                class="imagen_producto">
+
+        </div>
+
+        <!-- Información -->
+        <div class="informacion_producto">
+
+            <span class="etiqueta_categoria">
+                  20 g de proteína
+            </span>
+
+            <h1 class="nombre_producto">
+                CLASSIC
+                <br>
+            </h1>
+
+            <div class="contenedor_precio">
+
+                <span class="precio_producto">
+                    S/ 21.00
+                </span>
+
+                <span class="texto_unidad">
+                    por unidad
+                </span>
+
+            </div>
+
+            <hr class="linea_divisoria">
+
+            <h3 class="titulo_descripcion">
+                Descripción
+            </h3>
+
+            <p class="descripcion_producto">
+
+              Waffle con sabor a manjar, servido con plátano,
+               fresas y arándanos frescos. La cremosidad del
+                manjar se fusiona con el toque fresco y
+                 ligeramente ácido de las frutas para crear
+                  una experiencia única.
+            </p>
+
+            <button class="boton_ver_ingredientes">
+                Pedir Ahora 
+            </button>
+
+        </div>
+
+    </section>
+
+
+    
+    <section class="contenedor_producto">
+
+        <!-- Imagen -->
+        <div class="contenedor_imagen_producto">
+
+            <img
+                src="imagenes/CARAMEL CRUNCHwaflee.png"
+                alt="Waffle Proteico con Plátano y Oreo"
+                class="imagen_producto">
+
+        </div>
+
+        <!-- Información -->
+        <div class="informacion_producto">
+
+            <span class="etiqueta_categoria">
+                  28 g de proteína
+            </span>
+
+            <h1 class="nombre_producto">
+                CARAMEL CRUNCH
+                <br>
+            </h1>
+
+            <div class="contenedor_precio">
+
+                <span class="precio_producto">
+                    S/ 21.00
+                </span>
+
+                <span class="texto_unidad">
+                    por unidad
+                </span>
+
+            </div>
+
+            <hr class="linea_divisoria">
+
+            <h3 class="titulo_descripcion">
+                Descripción
+            </h3>
+
+            <p class="descripcion_producto">
+
+              Base con sabor a manjar, servida con rodajas
+               de plátano fresco, pecanas crocantes y 
+               un suave toque de crema chantilly. 
+               La combinación perfecta entre la cremosidad
+                del manjar, el dulzor natural del plátano y
+                 la textura de las pecanas.
+
+            </p>
+
+            <button class="boton_ver_ingredientes">
+                Pedir Ahora 
+            </button>
+
+        </div>
+
+    </section>
+
+
+    
+    <section class="contenedor_producto">
+
+        <!-- Imagen -->
+        <div class="contenedor_imagen_producto">
+
+            <img
+                src="imagenes/PEANUT BUTTER BROWNIE.png"
+                alt="Waffle Proteico con Plátano y Oreo"
+                class="imagen_producto">
+
+        </div>
+
+        <!-- Información -->
+        <div class="informacion_producto">
+
+            <span class="etiqueta_categoria">
+                 20 g de proteína
+            </span>
+
+            <h1 class="nombre_producto">
+PEANUT BUTTER BROWNIE 
+            </h1>
+
+            <div class="contenedor_precio">
+
+                <span class="precio_producto">
+                    S/ 20.00
+                </span>
+
+                <span class="texto_unidad">
+                    por unidad
+                </span>
+
+            </div>
+
+            <hr class="linea_divisoria">
+
+            <h3 class="titulo_descripcion">
+                Descripción
+            </h3>
+
+            <p class="descripcion_producto">
+
+             Waffle con base de chocolate y mantequilla de maní,
+              terminado con una generosa cobertura de fudge y 
+              maní tostado. Una experiencia llena de sabor, cremosidad
+               y un irresistible toque crocante en cada bocado.
+
+
+            </p>
+
+            <button class="boton_ver_ingredientes">
+                Pedir Ahora 
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+      <section class="contenedor_producto">
+
+        <!-- Imagen -->
+        <div class="contenedor_imagen_producto">
+
+            <img
+                src="imagenes/PIZZA FIT.png"
+                alt="Waffle Proteico con Plátano y Oreo"
+                class="imagen_producto">
+
+        </div>
+
+        <!-- Información -->
+        <div class="informacion_producto">
+
+            <span class="etiqueta_categoria">
+                 25 g de proteína
+            </span>
+
+            <h1 class="nombre_producto">
+               PIZZA FIT
+            </h1>
+
+            <div class="contenedor_precio">
+
+                <span class="precio_producto">
+                    S/ 21.00
+                </span>
+
+                <span class="texto_unidad">
+                    por unidad
+                </span>
+
+            </div>
+
+            <hr class="linea_divisoria">
+
+            <h3 class="titulo_descripcion">
+                Descripción
+            </h3>
+
+            <p class="descripcion_producto">
+
+             Waffle de base protéica con queso, cubierto
+              con salsa de pizza, queso fundido y un delicado
+               toque de orégano. Una fusión perfecta entre el
+                sabor tradicional de la pizza y una opción rica
+                 en proteína, ideal para cualquier momento del día.
+
+
+            </p>
+
+            <button class="boton_ver_ingredientes">
+                Pedir Ahora 
+            </button>
+
+        </div>
+
+    </section>
+
+</div> <!-- cierre de waffles --> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="teas" class="productos" style="display:none;">
+
+<!-- =========================
+     TOPPINGS TEAS
+========================= -->
+
+<section class="seccion_toppings">
+
+    <h2 class="titulo_toppings">
+        PERSONALIZA TU TEA ,
+        AGREGA TU POPPING BUBBLES
+    </h2>
+
+    <div class="contenedor_toppings">
+
+        <!-- Topping 1 -->
+        <div class="tarjeta_topping">
+
+            <img
+                src="imagenes/toppin 1.png"
+                alt="Perlas de Tapioca"
+                class="imagen_topping">
+
+            <h3 class="nombre_topping">
+                Lychee Bubbles
+            </h3>
+
+            <span class="precio_topping">
+                + S/ 2.00
+            </span>
+
+            <p class="descripcion_topping">
+                Perlas con relleno líquido de lychee,
+                 de sabor dulce y tropical que explotan
+                  en cada bocado.
+            </p>
+
+        </div>
+
+        <!-- Topping 2 -->
+        <div class="tarjeta_topping">
+
+            <img
+                src="imagenes/toppin 2.png"
+                alt="Durazno"
+                class="imagen_topping">
+
+            <h3 class="nombre_topping">
+                Blueberry Bubbles
+            </h3>
+
+            <span class="precio_topping">
+                + S/ 2.00
+            </span>
+
+            <p class="descripcion_topping">
+                Perlas con relleno líquido de arándano,
+                 de sabor frutal y ligeramente ácido para 
+                 una experiencia refrescante.
+            </p>
+
+        </div>
+
+</section>
+
+
+
+    <section class="contenedor_producto">
+
+        <div class="contenedor_imagen_producto">
+            <img
+                src="imagenes/teafresa.png"
+                alt="Té Verde"
+                class="imagen_producto">
+        </div>
+
+        <div class="informacion_producto">
+
+            <span class="etiqueta_categoria">
+                10 g de proteína y colágen
+            </span>
+
+            <h1 class="nombre_producto">
+PINK  
+            </h1>
+
+            <div class="contenedor_precio">
+                <span class="precio_producto">
+                    S/ 15.00
+                </span>
+
+                <span class="texto_unidad">
+                    por unidad
+                </span>
+            </div>
+
+            <hr class="linea_divisoria">
+
+            <h3 class="titulo_descripcion">
+                Descripción
+            </h3>
+
+            <p class="descripcion_producto">
+                Bebida con delicioso sabor a fresa, enriquecida 
+                con 10 g de proteína y colágeno. Una opción ideal
+                 para complementar tu alimentación, ayudando a la
+                  recuperación muscular mientras disfrutas de un sabor 
+                  fresco y cremoso.
+            </p>
+
+            <button class="boton_ver_ingredientes">
+                Pedir Ahora
+            </button>
+
+        </div>
+
+    </section>
+
+
+<section class="contenedor_producto">
+
+        <div class="contenedor_imagen_producto">
+            <img
+                src="imagenes/teanaranja.png"
+                alt="Té Verde"
+                class="imagen_producto">
+        </div>
+
+        <div class="informacion_producto">
+
+            <span class="etiqueta_categoria">
+                10 g de proteína y vitamina c
+            </span>
+
+            <h1 class="nombre_producto">
+                ATOMIC
+            </h1>
+
+            <div class="contenedor_precio">
+                <span class="precio_producto">
+                    S/ 15.00
+                </span>
+
+                <span class="texto_unidad">
+                    por unidad
+                </span>
+            </div>
+
+            <hr class="linea_divisoria">
+
+            <h3 class="titulo_descripcion">
+                Descripción
+            </h3>
+
+            <p class="descripcion_producto">
+                Refrescante bebida sabor a naranja que
+                 aporta un impulso de energía para acompañarte 
+                 antes, durante o después de tus actividades.
+                  Disfruta de su sabor cítrico mientras
+                   mantienes tu rendimiento.
+            </p>
+
+            <button class="boton_ver_ingredientes">
+                Pedir Ahora
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section class="contenedor_producto">
+
+        <div class="contenedor_imagen_producto">
+            <img
+                src="imagenes/teamanzana.png"
+                alt="Té Verde"
+                class="imagen_producto">
+        </div>
+
+        <div class="informacion_producto">
+
+            <span class="etiqueta_categoria">
+                Tea
+            </span>
+
+            <h1 class="nombre_producto">
+                DETOX
+            </h1>
+
+            <div class="contenedor_precio">
+                <span class="precio_producto">
+                    S/ 15.00
+                </span>
+
+                <span class="texto_unidad">
+                    5 g de fibra
+                </span>
+            </div>
+
+            <hr class="linea_divisoria">
+
+            <h3 class="titulo_descripcion">
+                Descripción
+            </h3>
+
+            <p class="descripcion_producto">
+                Refrescante bebida con sabor a manzana,
+                 elaborada para complementar tu alimentación 
+                 con un aporte de fibra. Su delicioso sabor la
+                  convierte en una excelente opción para 
+                  disfrutar en cualquier momento del día.
+            </p>
+
+            <button class="boton_ver_ingredientes">
+                Pedir Ahora
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+
+    <section class="contenedor_producto">
+
+        <div class="contenedor_imagen_producto">
+            <img
+                src="imagenes/tementa.png"
+                alt="Té Verde"
+                class="imagen_producto">
+        </div>
+
+        <div class="informacion_producto">
+
+            <span class="etiqueta_categoria">
+              Bienestar digestivo
+            </span>
+
+            <h1 class="nombre_producto">
+                RELAX
+            </h1>
+
+            <div class="contenedor_precio">
+                <span class="precio_producto">
+                    S/ 12.00
+                </span>
+
+                <span class="texto_unidad">
+                    por unidad
+                </span>
+            </div>
+
+            <hr class="linea_divisoria">
+
+            <h3 class="titulo_descripcion">
+                Descripción
+            </h3>
+
+            <p class="descripcion_producto">
+                Bebida con refrescante sabor a menta, elaborada
+                 con una selección de hierbas de aroma suave.
+                  Ideal para disfrutar un momento de frescura
+                   y bienestar en cualquier momento del día.
+            </p>
+
+            <button class="boton_ver_ingredientes">
+                Pedir Ahora
+            </button>
+
+        </div>
+
+    </section>
+
+
+<section class="contenedor_producto">
+
+        <div class="contenedor_imagen_producto">
+            <img
+                src="imagenes/tefrutos.png"
+                alt="Té Verde"
+                class="imagen_producto">
+        </div>
+
+        <div class="informacion_producto">
+
+            <span class="etiqueta_categoria">
+                300 mg de electrolitos
+            </span>
+
+            <h1 class="nombre_producto">
+                ENERGY
+            </h1>
+
+            <div class="contenedor_precio">
+                <span class="precio_producto">
+                    S/ 14.00
+                </span>
+
+                <span class="texto_unidad">
+                    por unidad
+                </span>
+            </div>
+
+            <hr class="linea_divisoria">
+
+            <h3 class="titulo_descripcion">
+                Descripción
+            </h3>
+
+            <p class="descripcion_producto">
+                El refrescante sabor de los frutos rojos 
+                se combina con electrolitos para acompañar
+                 tu hidratación y ayudarte a recuperar
+                  líquidos después del ejercicio o en
+                   los días más activos.
+            </p>
+
+            <button class="boton_ver_ingredientes">
+                Pedir Ahora
+            </button>
+
+        </div>
+
+    </section>
+
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="calientes" class="productos" style="display:none;">
+
+    <section class="contenedor_producto">
+
+        <!-- Imagen -->
+        <div class="contenedor_imagen_producto">
+
+            <img
+                src="imagenes/bebidaoreo.png"
+                alt="Waffle Proteico con Plátano y Oreo"
+                class="imagen_producto">
+
+        </div>
+
+        <!-- Información -->
+        <div class="informacion_producto">
+
+            <span class="etiqueta_categoria">
+                 Proteico
+            </span>
+
+            <h1 class="nombre_producto">
+                                 MOCCA LATTE 
+
+                <br>
+            </h1>
+
+            <div class="contenedor_precio">
+
+                <span class="precio_producto">
+                    S/ 18.00
+                </span>
+
+                <span class="texto_unidad">
+                    por unidad
+                </span>
+
+            </div>
+
+            <hr class="linea_divisoria">
+
+            <h3 class="titulo_descripcion">
+                Descripción
+            </h3>
+
+            <p class="descripcion_producto">
+
+                Café de intenso sabor, mezclado con cremosa leche
+                 y trozos de Oreo que aportan una textura y un sabor
+                  inigualables. El equilibrio perfecto entre lo clásico
+                   y lo dulce.
+            </p>
+
+            <button class="boton_ver_ingredientes">
+                Pedir Ahora 
+            </button>
+
+            </div>
+</section>
+
+
+<section class="contenedor_producto">
+
+        <!-- Imagen -->
+        <div class="contenedor_imagen_producto">
+
+            <img
+                src="imagenes/bebidacaramel.png"
+                alt="Waffle Proteico con Plátano y Oreo"
+                class="imagen_producto">
+
+        </div>
+
+        <!-- Información -->
+        <div class="informacion_producto">
+
+            <span class="etiqueta_categoria">
+                 Proteico
+            </span>
+
+            <h1 class="nombre_producto">
+                HOT CARAMEL
+                <br>
+            </h1>
+
+            <div class="contenedor_precio">
+
+                <span class="precio_producto">
+                    S/ 18.00
+                </span>
+
+                <span class="texto_unidad">
+                    por unidad
+                </span>
+
+            </div>
+
+            <hr class="linea_divisoria">
+
+            <h3 class="titulo_descripcion">
+                Descripción
+            </h3>
+
+            <p class="descripcion_producto">
+
+                Una irresistible combinación de suave manjar 
+                y delicioso chocolate, que crea una experiencia
+                 cremosa, dulce y llena de sabor en cada sorbo.
+
+            </p>
+
+            <button class="boton_ver_ingredientes">
+                Pedir Ahora 
+            </button>
+
+            </div>
+</section>
+
+
+
+<section class="contenedor_producto">
+
+        <!-- Imagen -->
+        <div class="contenedor_imagen_producto">
+
+            <img
+                src="imagenes/bebidachocolate.png"
+                alt="Waffle Proteico con Plátano y Oreo"
+                class="imagen_producto">
+
+        </div>
+
+        <!-- Información -->
+        <div class="informacion_producto">
+
+            <span class="etiqueta_categoria">
+                 Proteico
+            </span>
+
+            <h1 class="nombre_producto">
+               HOT CHOCOLATE
+                <br>
+            </h1>
+
+            <div class="contenedor_precio">
+
+                <span class="precio_producto">
+                    S/ 18.00
+                </span>
+
+                <span class="texto_unidad">
+                    por unidad
+                </span>
+
+            </div>
+
+            <hr class="linea_divisoria">
+
+            <h3 class="titulo_descripcion">
+                Descripción
+            </h3>
+
+            <p class="descripcion_producto">
+
+                Una exquisita combinación de chocolate premium con
+                 aromas de canela y clavo de olor, complementada con 
+                 suaves malvaviscos de colores que hacen de cada sorbo 
+                 una experiencia única.
+
+            </p>
+
+            <button class="boton_ver_ingredientes">
+                Pedir Ahora 
+            </button>
+
+            </div>
+</section>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="frappes" class="productos" style="display:none;">
+
+
+<section class="contenedor_producto">
+
+        <!-- Imagen -->
+        <div class="contenedor_imagen_producto">
+
+            <img
+                src="imagenes/frappeoreo.png"
+                alt="Waffle Proteico con Plátano y Oreo"
+                class="imagen_producto">
+
+        </div>
+
+        <!-- Información -->
+        <div class="informacion_producto">
+
+            <span class="etiqueta_categoria">
+                 Proteico
+            </span>
+
+            <h1 class="nombre_producto">
+              OREO
+                <br>
+            </h1>
+
+            <div class="contenedor_precio">
+
+                <span class="precio_producto">
+                    S/ 18.00
+                </span>
+
+                <span class="texto_unidad">
+                    por unidad
+                </span>
+
+            </div>
+
+            <hr class="linea_divisoria">
+
+            <h3 class="titulo_descripcion">
+                Descripción
+            </h3>
+
+            <p class="descripcion_producto">
+
+             Disfruta nuestro Frappé Oreo, preparado 
+             con una cremosa base de leche, hielo y 
+             auténticas galletas Oreo, terminado con 
+             crema chantilly, crujientes trozos de Oreo 
+             y un toque de salsa de chocolate. Una bebida
+              refrescante que combina textura, intensidad 
+              y un sabor irresistible.
+            </p>
+
+            <button class="boton_ver_ingredientes">
+                Pedir Ahora 
+            </button>
+
+            </div>
+</section>
+
+
+
+
+
+<section class="contenedor_producto">
+
+        <!-- Imagen -->
+        <div class="contenedor_imagen_producto">
+
+            <img
+                src="imagenes/fappepiedelimon.png"
+                alt="Waffle Proteico con Plátano y Oreo"
+                class="imagen_producto">
+
+        </div>
+
+        <!-- Información -->
+        <div class="informacion_producto">
+
+            <span class="etiqueta_categoria">
+                 Proteico
+            </span>
+
+            <h1 class="nombre_producto">
+               PIE DE LIMÓN
+                <br>
+            </h1>
+
+            <div class="contenedor_precio">
+
+                <span class="precio_producto">
+                    S/ 18.00
+                </span>
+
+                <span class="texto_unidad">
+                    por unidad
+                </span>
+
+            </div>
+
+            <hr class="linea_divisoria">
+
+            <h3 class="titulo_descripcion">
+                Descripción
+            </h3>
+
+            <p class="descripcion_producto">
+
+                Frappé cremoso con el inconfundible 
+                sabor a pie de limón, acompañado de
+                 crema chantilly, galleta triturada
+                  y un toque de ralladura de limón. 
+                  Una bebida refrescante, dulce y 
+                  perfectamente equilibrada.
+            </p>
+
+            <button class="boton_ver_ingredientes">
+                Pedir Ahora 
+            </button>
+
+            </div>
+</section>
+
+
+<section class="contenedor_producto">
+
+        <!-- Imagen -->
+        <div class="contenedor_imagen_producto">
+
+            <img
+                src="imagenes/chompdenaranja.png"
+                alt="Waffle Proteico con Plátano y Oreo"
+                class="imagen_producto">
+
+        </div>
+
+        <!-- Información -->
+        <div class="informacion_producto">
+
+            <span class="etiqueta_categoria">
+                 Proteico
+            </span>
+
+            <h1 class="nombre_producto">
+               CHOMP DE NARANJA
+                <br>
+            </h1>
+
+            <div class="contenedor_precio">
+
+                <span class="precio_producto">
+                    S/ 18.00
+                </span>
+
+                <span class="texto_unidad">
+                    por unidad
+                </span>
+
+            </div>
+
+            <hr class="linea_divisoria">
+
+            <h3 class="titulo_descripcion">
+                Descripción
+            </h3>
+
+            <p class="descripcion_producto">
+
+                Frappé cremoso con el delicioso sabor a
+                 Chomp de naranja, acompañado de crema
+                  chantilly, chocolate rallado y un toque 
+                  de naranja fresca. Una bebida refrescante
+                   con una combinación clásica e irresistible.
+
+            </p>
+
+            <button class="boton_ver_ingredientes">
+                Pedir Ahora 
+            </button>
+
+            </div>
+</section>
+
+<section class="contenedor_producto">
+
+        <!-- Imagen -->
+        <div class="contenedor_imagen_producto">
+
+            <img
+                src="imagenes/frappecheesecakedefresa.png"
+                alt="Waffle Proteico con Plátano y Oreo"
+                class="imagen_producto">
+
+        </div>
+
+        <!-- Información -->
+        <div class="informacion_producto">
+
+            <span class="etiqueta_categoria">
+                 Proteico
+            </span>
+
+            <h1 class="nombre_producto">
+               CHEESECAKE DE FRESA
+                <br>
+            </h1>
+
+            <div class="contenedor_precio">
+
+                <span class="precio_producto">
+                    S/ 18.00
+                </span>
+
+                <span class="texto_unidad">
+                    por unidad
+                </span>
+
+            </div>
+
+            <hr class="linea_divisoria">
+
+            <h3 class="titulo_descripcion">
+                Descripción
+            </h3>
+
+            <p class="descripcion_producto">
+
+                Frappé cremoso con sabor a cheesecake de
+                 fresa, acompañado de crema chantilly,
+                  salsa de fresa y galleta triturada. Una 
+                  combinación refrescante y deliciosa 
+                  inspirada en el clásico postre.
+
+            </p>
+
+            <button class="boton_ver_ingredientes">
+                Pedir Ahora 
+            </button>
+
+            </div>
+</section>
+
+<section class="contenedor_producto">
+
+        <!-- Imagen -->
+        <div class="contenedor_imagen_producto">
+
+            <img
+                src="imagenes/SUBLIME.png"
+                alt="Waffle Proteico con Plátano y Oreo"
+                class="imagen_producto">
+
+        </div>
+
+        <!-- Información -->
+        <div class="informacion_producto">
+
+            <span class="etiqueta_categoria">
+                 Proteico
+            </span>
+
+            <h1 class="nombre_producto">
+               SUBLIME
+                <br>
+            </h1>
+
+            <div class="contenedor_precio">
+
+                <span class="precio_producto">
+                    S/ 18.00
+                </span>
+
+                <span class="texto_unidad">
+                    por unidad
+                </span>
+
+            </div>
+
+            <hr class="linea_divisoria">
+
+            <h3 class="titulo_descripcion">
+                Descripción
+            </h3>
+
+            <p class="descripcion_producto">
+
+                Refrescante frappé inspirado en el inconfundible 
+                sabor del chocolate Sublime. Preparado con una 
+                cremosa mezcla de leche, hielo y chocolate, 
+                acompañado de trozos de maní crocante, crema
+                 chantilly y un toque de salsa de chocolate.
+                  Una combinación perfecta de cremosidad y 
+                  textura en cada sorbo.
+
+            </p>
+
+            <button class="boton_ver_ingredientes">
+                Pedir Ahora 
+            </button>
+
+            </div>
+</section>
+
+<section class="contenedor_producto">
+
+        <!-- Imagen -->
+        <div class="contenedor_imagen_producto">
+
+            <img
+                src="imagenes/FRAPPEMOCACHINO.png"
+                alt="Waffle Proteico con Plátano y Oreo"
+                class="imagen_producto">
+
+        </div>
+
+        <!-- Información -->
+        <div class="informacion_producto">
+
+            <span class="etiqueta_categoria">
+                 Proteico
+            </span>
+
+            <h1 class="nombre_producto">
+               MOCACCINO
+                <br>
+            </h1>
+
+            <div class="contenedor_precio">
+
+                <span class="precio_producto">
+                    S/ 18.00
+                </span>
+
+                <span class="texto_unidad">
+                    por unidad
+                </span>
+
+            </div>
+
+            <hr class="linea_divisoria">
+
+            <h3 class="titulo_descripcion">
+                Descripción
+            </h3>
+
+            <p class="descripcion_producto">
+
+               Delicioso frappé que combina la intensidad
+                del café con el sabor del chocolate, preparado 
+                con leche y hielo para lograr una textura suave 
+                y cremosa. Decorado con crema chantilly, sirope 
+                de chocolate y un ligero toque de cacao, creando
+                 una bebida refrescante con el equilibrio perfecto 
+                 entre dulzura y café.
+
+            </p>
+
+            <button class="boton_ver_ingredientes">
+                Pedir Ahora 
+            </button>
+
+            </div>
+</section>
+
+
+
+  </div>
+
+
+  
+
+
+
+  
+
+
+  
+
+
+
+
+
+<script>
+
+function mostrarCategoria(categoria) {
+
+    // Ocultar publicidad
+    document.getElementById("publicidad").style.display = "none";
+
+    // Ocultar todas las categorías de productos
+    let productos = document.querySelectorAll(".productos");
+
+    productos.forEach(function(item) {
+        item.style.display = "none";
+    });
+
+    // Mostrar la categoría seleccionada
+    document.getElementById(categoria).style.display = "block";
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+<footer class="footer-final">
+
+    <!-- DIRECCIÓN -->
+    <div class="footer-item">
+
+        <div class="icono-cuadro">
+            <img src="iconos/Ubicacionicono.png"alt="Ubicación">
+        </div>
+
+        <div>
+            <h3>DIRECCIÓN</h3>
+            <p>Calle las Avutardas 194,<br>Santa Anita</p>
+        </div>
+
+    </div>
+
+    <!-- WHATSAPP -->
+    <div class="footer-item">
+
+        <a href="https://api.whatsapp.com/send?phone=51924699821" target="_blank" class="icono-cuadro">
+             <img src="iconos/Ubicacionicono.png" alt="WhatsApp">
+        </a>
+        <div>
+            <h3>WHATSAPP</h3>
+            <p>9545469636</p>
+        </div>
+
+    </div>
+
+    <!-- HORARIO -->
+    <div class="footer-item">
+
+        <div class="icono-cuadro">
+            <img src="iconos/Iconohorario.png" alt="Horario">
+        </div>
+
+        <div>
+            <h3>HORARIO</h3>
+            <p>L - V: 8:00 am - 8:00 pm</p>
+        </div>
+
+    </div>
+
+    <!-- REDES -->
+    <div class="footer-item">
+
+        <div>
+            <h3>SÍGUENOS</h3>
+
+            <div class="redes">
+
+                <a href="https://www.instagram.com/rootsprotein?igsh=M3ZrOXl4bzcwenZu" target="_blank">
+                    <img src="iconos/IconoInstagram.png" alt="Instagram">
+                </a>
+
+                <a href="https://www.tiktok.com/@rootsprotein?_r=1&_t=ZS-971VDxxP2qi" target="_blank">
+                    <img src="iconos/Tiktokicono.png" alt="TikTok">
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<div class="piedepagina">
+
+DISEÑADORAS WEB - Jussely Baldeon - Raquel Garcia - Mafer Sanchez - Sujey Origuela </div>
+
+
+  
+</div>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

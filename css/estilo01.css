@@ -1,0 +1,777 @@
+/* Cabecera */
+body { 
+font-family: 'Lato', sans-serif; /* fuente principal */
+}
+
+
+.cabecera {
+  background-color: #590902;
+  border-bottom: 1px solid #fffcf3;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  min-height: 90px;   /* asegura que no sea muy baja */
+}
+
+/* Contenedor principal */
+.menu {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1rem 2rem; /* aumenta el espacio vertical */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.menu img {
+  height: 50px;   /* ajusta según lo que quieras */
+  width: auto;
+  object-fit: contain;
+   display: block;
+    
+}
+
+/* Botones */
+.botones {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.enlaces {
+  text-decoration: none;
+  color: #fffcf3;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+ transform: translateX(-2px);
+}
+
+.enlaces:hover {
+  color: #fffcf3;
+  font-weight: 800;
+}
+
+
+
+
+
+
+
+/* parte 1 */
+
+.promocion {
+  width: 100%;              /* ya no limitamos a 1440px */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+}
+
+.texto {
+  background-color: #fffcf3;
+  padding: 3rem 3rem 3rem 0;
+  padding-left: max(2rem, calc((95vw - 1440px) / 2 + 2rem));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.texto h2 {
+  color: #590902; 
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.texto h3 {
+  color: #590902;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.texto .linea {
+  border: none;
+  border-top: 3px solid #590902;
+  width: 435px;
+  margin: 1rem 0;
+}
+
+.texto p {
+  color: #590902;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+/* Botones */
+.boton-principal,
+.boton-secundario {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  margin-right: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px; /* redondeados */
+  transition: all 0.3s ease;
+}
+
+/* Botón principal */
+.boton-principal {
+  background-color: #89b892;
+  color: #fffcf3;
+}
+
+.boton-principal:hover {
+  background-color: #89b892;
+  transform: scale(1.05);
+}
+
+/* Botón secundario */
+.boton-secundario {
+  background-color: transparent;
+  border: 2px solid #89b892;
+  color: #89b892;
+}
+
+.boton-secundario:hover {
+ 
+  color: #89b892;
+}
+
+
+.imagen img {
+  max-width: 100%;
+  width: 100%;        /* ← añade esto */
+  height: 100%;       /* ← cambia auto por 100% */
+  object-fit: cover;  /* ← añade esto, recorta para llenar */
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Efecto hover en imagen */
+.imagen img:hover {
+  transform: scale(1.01);      /* zoom suave */
+  filter: brightness(1.05);     /* más luminoso */
+}
+.imagen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+.carrusel-videos {
+  background-color: #590902;
+  width: 100%;
+  padding: 60px 0;
+  box-sizing: border-box;
+}
+
+.carrusel-videos .container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+}
+
+.video video {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 250 / 450;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: block;
+}
+
+.destacado video {
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.358);
+}
+
+.video video:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==================================
+NUESTRA MARCA
+==================================*/
+
+.nuestra-marca{
+    background: linear-gradient(180deg,#fffdf7,#f8f4ea);
+    padding: 90px 2rem;      /* antes: 90px 8% */
+}
+
+.nuestra-marca-contenido{
+    max-width: 1440px;       /* antes: 1200px, ahora igual que el resto */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+/*=========================
+IMAGEN
+=========================*/
+
+.marca-imagen{
+
+    flex:1.2;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.marca-imagen img{
+    width: 100%;
+    max-width: 560px;       /* antes: 420px */
+    border-radius: 25px;
+    box-shadow: 0 25px 60px rgba(0,0,0,.15);
+    transition: .45s;
+}
+
+
+.marca-imagen img:hover{
+
+    transform:translateY(-8px) scale(1.03);
+
+    box-shadow:0 35px 70px rgba(0,0,0,.22);
+
+}
+
+/*=========================
+TEXTO
+=========================*/
+
+.marca-texto{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeUp .8s ease;
+}
+
+.marca-linea{
+
+    width:70px;
+
+    height:5px;
+
+    background:#89b892;
+
+    border-radius:40px;
+
+    margin-bottom:15px;
+
+}
+
+.marca-texto h2{
+
+    font-size:64px;
+
+    color:#590902;
+
+    line-height:1.05;
+
+    margin-bottom:8px;
+
+}
+
+.marca-texto h3{
+
+    font-size:28px;
+
+    color:#6d8f74;
+
+    margin-bottom:15px;
+
+    font-weight:600;
+
+}
+
+.marca-texto p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#590902;
+
+    margin-bottom:25px;
+
+    max-width:500px;
+
+}
+
+/*=========================
+BOTÓN
+=========================*/
+
+.marca-boton{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:290px;
+
+    padding:17px;
+
+    border-radius:40px;
+
+    background:#89b892;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.marca-boton:hover{
+
+    transform:translateY(-5px);
+
+    background:#590902;
+
+    box-shadow:0 15px 30px rgba(137,184,146,.35);
+
+}
+
+/*=========================
+ANIMACIÓN
+=========================*/
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/*=========================
+RESPONSIVE
+=========================*/
+
+@media(max-width:992px){
+
+.nuestra-marca{
+
+padding:70px 30px;
+
+}
+
+.nuestra-marca-contenido{
+
+flex-direction:column;
+
+text-align:center;
+
+gap:50px;
+
+}
+
+.marca-imagen img{
+
+max-width:340px;
+
+}
+
+.marca-texto{
+
+align-items:center;
+
+}
+
+.marca-linea{
+
+margin:0 auto 20px;
+
+}
+
+.marca-texto h2{
+
+font-size:45px;
+
+}
+
+.marca-texto h3{
+
+font-size:22px;
+
+}
+
+.marca-texto p{
+
+font-size:17px;
+
+max-width:100%;
+
+}
+
+.marca-boton{
+
+width:100%;
+
+max-width:320px;
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= PARTE 4 ================= */
+.parte4 {
+  padding: 0; /* quitamos padding general para manejar cada bloque */
+}
+
+/* ¿Por qué elegirnos? */
+.elegirnos {
+  background-color: #590902; /* verde */
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.elegirnos h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.iconos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.icono {
+  text-align: center;
+}
+
+/* Imagen dentro de la caja */
+.icono img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%; /* esquinas redondeadas */
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* suavidad del efecto */
+  position: relative;
+  
+}
+
+/* Efecto al pasar el mouse */
+.icono img:hover {
+    transform: scale(1.1); /* zoom al 110% */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* sombra para resaltar */
+}
+
+/* TEXTO DE ICONO  */
+.icono p {
+  font-weight: 600;
+} 
+
+/* Botón dentro de elegirnos */
+.elegirnos .boton-principal {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  background-color: #fff;
+  color: #89b892;
+  transition: all 0.3s ease;
+}
+
+.elegirnos .boton-principal:hover {
+  background-color: #89b892;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Imagen dentro de la caja */
+.icono img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+
+
+/* Efecto al pasar el mouse */
+.icono img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Nuestro Blog */
+.blog {
+  background-color: #fffcf3;
+  text-align: center;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
+.blog h2 {
+  color: #590902;
+  font-size: 2.5rem;
+  margin-top: -20px;
+  margin-bottom: 2rem;
+}
+
+.entradas {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;   /* antes: center */
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.entrada {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  flex: 1;               /* antes: max-width fijo, ahora se reparte el espacio */
+  max-width: 420px;      /* límite para que no crezcan demasiado en pantallas muy anchas */
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.entrada:hover {
+  transform: scale(1.03);
+}
+
+.entrada img {
+  width: 100%;
+   height: 200px;          /* altura uniforme para todas las imágenes */
+    object-fit: cover;      /* recorta sin deformar */
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.entrada h3 {
+  color: #6e8e63;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.entrada p {
+  color: #333;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-final{
+    background-color: #590902;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-item{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-item h3{
+    color: white;
+    font-size: 18px;
+    margin: 0;
+}
+
+.footer-item p{
+    color: white;
+    font-size: 14px;
+    margin: 3px 0 0;
+}
+
+.icono-cuadro{
+    width: 45px;
+    height: 45px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    border-radius: 50%
+}
+
+.redes{
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.redes a{
+    width: 45px;
+    height: 45px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 50%
+}
+
+/* TAMAÑO DE LOS ICONOS PNG */
+.icono-cuadro img,
+
+.redes img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* EFECTO ZOOM */
+.icono-cuadro:hover,
+.redes a:hover{
+    transform: scale(1.15)
+    
+}
+
+
+
+
+
+
+
+
+.piedepagina{
+    background-color: #fffcf3;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,1647 @@
+/* Cabecera */
+body { 
+font-family: 'Lato', sans-serif; /* fuente principal */
+}
+
+
+.cabecera {
+  background-color: #590902;
+  border-bottom: 1px solid #fffcf3;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  min-height: 90px;   /* asegura que no sea muy baja */
+}
+
+/* Contenedor principal */
+.menu {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1rem 2rem; /* aumenta el espacio vertical */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.menu img {
+  height: 50px;   /* ajusta según lo que quieras */
+  width: auto;
+  object-fit: contain;
+   display: block;
+    
+}
+
+/* Botones */
+.botones {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.enlaces {
+  text-decoration: none;
+  color: #fffcf3;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+ transform: translateX(-2px);
+}
+
+.enlaces:hover {
+  color: #fffcf3;
+  font-weight: 800;
+}
+
+
+/*=========================================
+TABLET (768px)
+=========================================*/
+
+@media (max-width: 768px){
+
+    .cabecera{
+        min-height:80px;
+    }
+
+    .menu{
+        padding:15px 25px;
+    }
+
+    .menu img{
+        height:42px;
+    }
+
+    .botones{
+        gap:20px;
+    }
+
+    .enlaces{
+        font-size:14px;
+    }
+}
+
+/*=========================================
+CELULARES (480px)
+=========================================*/
+
+@media (max-width:480px){
+
+    .cabecera{
+
+        min-height:auto;
+
+    }
+
+    .menu{
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:center;
+
+        gap:15px;
+
+        padding:15px;
+
+    }
+
+    .menu img{
+
+        height:40px;
+
+    }
+
+    .botones{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:15px;
+
+    }
+
+    .enlaces{
+
+        font-size:13px;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==========================================
+BANNER CONTACTO
+==========================================*/
+
+.banner_contacto{
+
+    position:relative;
+
+    width:100%;
+
+    height:340px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background-image:url("../imagenes/Fondo\ nuestra\ historia.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+    
+
+}
+
+/* Oscurece ligeramente la imagen */
+
+
+
+/*==================================
+CONTENIDO
+==================================*/
+
+.contenido_banner{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    max-width:800px;
+
+    padding:0 20px;
+
+    animation:subir .9s ease;
+
+}
+
+/*==================================
+Etiqueta superior
+==================================*/
+
+.etiqueta_banner{
+
+    display:inline-block;
+
+    padding:8px 22px;
+
+    background:rgba(255,255,255,.18);
+
+    border:1px solid rgba(255,255,255,.30);
+
+    backdrop-filter:blur(8px);
+
+    color:#fff;
+
+    border-radius:30px;
+
+    font-size:15px;
+
+    letter-spacing:1px;
+
+    margin-bottom:22px;
+
+}
+
+/*==================================
+Título
+==================================*/
+
+.titulo_contacto{
+
+    font-size:68px;
+
+    font-weight:800;
+
+    color:#590902;
+
+    letter-spacing:2px;
+
+    margin-bottom:18px;
+
+    text-shadow:0 8px 18px rgba(0,0,0,.15);
+
+}
+
+/*==================================
+Subtitulo
+==================================*/
+
+.subtitulo_contacto{
+
+    font-size:26px;
+
+    color:#590902;
+
+    font-weight:500;
+
+    margin-bottom:12px;
+
+}
+
+/*==================================
+Descripción
+==================================*/
+
+.descripcion_contacto{
+
+    font-size:18px;
+
+    color:#590902;
+
+    line-height:1.7;
+
+}
+
+/*==================================
+Animación
+==================================*/
+
+@keyframes subir{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(45px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/*==============================
+TABLET
+==============================*/
+
+@media(max-width:992px){
+
+.banner_contacto{
+
+height:300px;
+
+}
+
+.titulo_contacto{
+
+font-size:52px;
+
+}
+
+.subtitulo_contacto{
+
+font-size:22px;
+
+}
+
+.descripcion_contacto{
+
+font-size:17px;
+
+}
+
+}
+
+
+/*==============================
+CELULAR
+==============================*/
+
+@media(max-width:768px){
+
+.banner_contacto{
+
+height:260px;
+
+padding:20px;
+
+}
+
+.etiqueta_banner{
+
+font-size:13px;
+
+padding:6px 18px;
+
+}
+
+.titulo_contacto{
+
+font-size:40px;
+
+letter-spacing:1px;
+
+}
+
+.subtitulo_contacto{
+
+font-size:18px;
+
+}
+
+.descripcion_contacto{
+
+font-size:15px;
+
+line-height:1.6;
+
+}
+
+}
+
+
+/*==============================
+CELULARES PEQUEÑOS
+==============================*/
+
+@media(max-width:480px){
+
+.banner_contacto{
+
+height:230px;
+
+}
+
+.titulo_contacto{
+
+font-size:32px;
+
+}
+
+.subtitulo_contacto{
+
+font-size:16px;
+
+}
+
+.descripcion_contacto{
+
+font-size:14px;
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============================
+CONTENEDOR GENERAL
+==============================*/
+
+.contacto{
+
+    max-width:1400px;
+
+    margin:80px auto;
+
+    display:flex;
+
+    gap:35px;
+
+    align-items:flex-start;
+    color: #590902;
+
+}
+
+/*=============================
+COLUMNAS
+==============================*/
+
+.contacto-izquierda{
+
+    width:50%;
+
+}
+
+.contacto-derecha{
+
+    width:50%;
+
+}
+
+/*=============================
+CAJAS
+==============================*/
+
+.info-contacto,
+.contacto-derecha,
+.mapa-box{
+
+    background:white;
+
+    border:1px solid #e7e7e7;
+
+    border-radius:12px;
+
+    padding:30px;
+
+}
+
+/*=============================
+ESPACIO ENTRE INFO Y MAPA
+==============================*/
+
+.mapa-box{
+
+    margin-top:25px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/*=============================
+TÍTULOS
+==============================*/
+
+.info-contacto h2,
+.contacto-derecha h2{
+
+    margin-bottom:25px;
+
+    font-size:28px;
+
+}
+
+/*=============================
+GRID INFORMACIÓN
+==============================*/
+
+.grid-info{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.item-info{
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:flex-start;
+
+}
+
+.item-info img{
+
+    width:38px;
+    height:38px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+
+}
+
+.icono-envio{
+
+    width:70px !important;
+    height:70px !important;
+
+    object-fit:contain;
+
+}
+.item-info h4{
+
+    margin-bottom:8px;
+
+}
+
+.item-info p{
+
+    color:#666;
+
+    line-height:1.6;
+
+}
+
+
+.local{
+
+    width:95px;
+
+    height:95px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+}
+
+.estrellas{
+
+    color:#F4B400;
+
+    font-size:18px;
+
+    margin:8px 0;
+
+}
+
+.tarjeta-mapa a{
+
+    color:#89b892;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+/*=============================
+FORMULARIO
+==============================*/
+
+.fila{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-bottom:20px;
+
+}
+
+.fila input{
+
+    box-sizing:border-box;
+    width:100%;
+
+    padding:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+}
+
+textarea{
+
+    width:100%;
+
+    height:170px;
+
+    padding:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    resize:none;
+
+    margin-bottom:20px;
+
+}
+
+.captcha{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:25px;
+
+}
+
+button{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    background:#590902;
+
+    color:white;
+
+    font-size:17px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#89b892;
+
+}
+
+@media (max-width:992px){
+
+    .contacto{
+        flex-direction:column;
+    }
+
+    .contacto-izquierda,
+    .contacto-derecha{
+        width:100%;
+    }
+
+    .grid-info{
+        grid-template-columns:1fr;
+    }
+
+    .fila{
+        flex-direction:column;
+    }
+
+    .tarjeta-mapa{
+        position:static;
+        width:100%;
+        margin-top:20px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .contacto{
+        margin:30px 15px;
+    }
+
+    .info-contacto,
+    .contacto-derecha,
+    .mapa-box{
+        padding:20px;
+    }
+
+    .contacto-derecha h2{
+        font-size:22px;
+    }
+
+    .fila{
+        gap:12px;
+    }
+
+    .fila input{
+        width:100%;
+    }
+
+    textarea{
+        height:140px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==================================
+PREGUNTAS FRECUENTES
+==================================*/
+
+.preguntas-frecuentes{
+
+    margin-top:40px;
+
+    background:#fff;
+
+    border:1px solid #e7e7e7;
+
+    border-radius:15px;
+
+    padding:35px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.titulo-faq{
+
+    font-size:30px;
+
+    margin-bottom:25px;
+
+    color:#222;
+
+    font-weight:bold;
+
+}
+
+
+/*==================================
+ITEM
+==================================*/
+
+.faq-item{
+
+    border:1px solid #ececec;
+
+    border-radius:12px;
+
+    margin-bottom:15px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    background:#fff;
+
+}
+
+.faq-item:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+
+}
+
+
+/*==================================
+PREGUNTA
+==================================*/
+
+.faq-item summary{
+
+    list-style:none;
+
+    cursor:pointer;
+
+    padding:22px 28px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    transition:.3s;
+
+}
+
+.faq-item summary::-webkit-details-marker{
+
+    display:none;
+
+}
+
+
+/*==================================
+ICONO
+==================================*/
+
+.faq-item summary::after{
+
+    content:"+";
+
+    font-size:30px;
+
+    color:#89b892;
+
+    transition:.35s;
+
+}
+
+.faq-item[open] summary::after{
+
+    transform:rotate(45deg);
+
+}
+
+
+/*==================================
+RESPUESTA
+==================================*/
+
+.faq-respuesta{
+
+    padding:0 28px 22px;
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+    animation:mostrar .35s ease;
+
+}
+
+@keyframes mostrar{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*==================================
+ACTIVO
+==================================*/
+
+.faq-item[open]{
+
+    border-left:6px solid #89b892;
+
+    background:#fcfdfb;
+
+}
+
+
+/*==================================
+RESPONSIVE
+==================================*/
+
+@media(max-width:768px){
+
+    .preguntas-frecuentes{
+
+        padding:22px;
+
+    }
+
+    .titulo-faq{
+
+        font-size:25px;
+
+        text-align:center;
+
+    }
+
+    .faq-item summary{
+
+        font-size:16px;
+
+        padding:18px;
+
+    }
+
+    .faq-respuesta{
+
+        font-size:15px;
+
+        padding:0 18px 18px;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==================================
+COLORES
+==================================*/
+
+:root{
+
+    --color-principal:#89b892;
+
+    --color-icono:#89b892;
+
+    --color-titulo:#89b892;
+
+    --color-texto:#666;
+
+    --color-linea:#e5e5e5;
+
+}
+
+
+/*==================================
+CONTENEDOR
+==================================*/
+
+.beneficios{
+
+    max-width:1400px;
+
+    margin:70px auto;
+
+    background:#fff;
+
+    border:1px solid #ececec;
+
+    border-radius:14px;
+
+    display:flex;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.05);
+
+}
+
+
+/*==================================
+CADA BENEFICIO
+==================================*/
+
+.beneficio{
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:28px;
+
+    position:relative;
+
+    transition:.35s;
+
+}
+
+
+/*==================================
+LÍNEA
+==================================*/
+
+.beneficio:not(:last-child)::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:0;
+
+    top:28px;
+
+    width:1px;
+
+    height:55%;
+
+    background:var(--color-linea);
+
+}
+
+
+/*==================================
+HOVER
+==================================*/
+
+.beneficio:hover{
+
+    background:#fafafa;
+
+}
+
+
+/*==================================
+ICONO
+==================================*/
+
+.icono-beneficio{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.35s;
+
+}
+
+.icono-beneficio img{
+
+    width:42px;
+
+    transition:.35s;
+
+}
+
+.beneficio:hover .icono-beneficio{
+
+    background:var(--color-principal);
+
+}
+
+.beneficio:hover .icono-beneficio img{
+
+    filter:brightness(0) invert(1);
+
+    transform:scale(1.1);
+
+}
+
+
+/*==================================
+TEXTOS
+==================================*/
+
+.texto-beneficio h3{
+
+    font-size:21px;
+
+    color:var(--color-titulo);
+
+    margin-bottom:10px;
+
+}
+
+.texto-beneficio p{
+
+    color:var(--color-texto);
+
+    line-height:1.7;
+
+    font-size:16px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-final{
+    background-color: #590902;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-item{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-item h3{
+    color: white;
+    font-size: 18px;
+    margin: 0;
+}
+
+.footer-item p{
+    color: white;
+    font-size: 14px;
+    margin: 3px 0 0;
+}
+
+.icono-cuadro{
+    width: 45px;
+    height: 45px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    border-radius: 50%
+}
+
+.redes{
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.redes a{
+    width: 45px;
+    height: 45px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 50%
+}
+
+/* TAMAÑO DE LOS ICONOS PNG */
+.icono-cuadro img,
+
+.redes img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* EFECTO ZOOM */
+.icono-cuadro:hover,
+.redes a:hover{
+    transform: scale(1.15)
+    
+}
+
+
+
+
+
+
+
+
+.piedepagina{
+    background-color: #fffcf3;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=====================================================
+RESPONSIVE GENERAL
+=====================================================*/
+
+/* Laptop */
+@media screen and (max-width:1200px){
+
+.menu,
+.contacto,
+.beneficios,
+.footer-final,
+.piedepagina{
+
+    padding-left:25px;
+    padding-right:25px;
+
+}
+
+}
+
+/* Tablet */
+@media screen and (max-width:992px){
+
+.contacto{
+
+    flex-direction:column;
+
+}
+
+.contacto-izquierda,
+.contacto-derecha{
+
+    width:100%;
+
+}
+
+.grid-info{
+
+    grid-template-columns:1fr;
+
+}
+
+.beneficios{
+
+    flex-wrap:wrap;
+
+}
+
+.beneficio{
+
+    width:50%;
+    flex:none;
+
+}
+
+.footer-final{
+
+    justify-content:center;
+    gap:35px;
+
+}
+
+}
+
+/* Tablet pequeña */
+@media screen and (max-width:768px){
+
+.menu{
+
+    flex-direction:column;
+    gap:15px;
+
+}
+
+.botones{
+
+    flex-wrap:wrap;
+    justify-content:center;
+
+}
+
+.banner_contacto{
+
+    height:260px;
+
+}
+
+.titulo_contacto{
+
+    font-size:38px;
+
+}
+
+.subtitulo_contacto{
+
+    font-size:18px;
+
+}
+
+.descripcion_contacto{
+
+    font-size:15px;
+
+}
+
+.contacto{
+
+    margin:35px 15px;
+
+}
+
+.info-contacto,
+.contacto-derecha,
+.mapa-box,
+.preguntas-frecuentes{
+
+    padding:20px;
+
+}
+
+.fila{
+
+    flex-direction:column;
+
+}
+
+.fila input{
+
+    width:100%;
+
+}
+
+textarea{
+
+    width:100%;
+    height:140px;
+
+}
+
+.beneficios{
+
+    flex-direction:column;
+
+}
+
+.beneficio{
+
+    width:100%;
+}
+
+.beneficio::after{
+
+    display:none;
+
+}
+
+.footer-final,
+.piedepagina{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    gap:20px;
+
+}
+
+.footer-item{
+
+    justify-content:center;
+
+}
+
+}
+
+/* Celulares */
+@media screen and (max-width:480px){
+
+.menu img{
+
+    height:38px;
+
+}
+
+.enlaces{
+
+    font-size:13px;
+
+}
+
+.banner_contacto{
+
+    height:220px;
+
+}
+
+.titulo_contacto{
+
+    font-size:30px;
+
+}
+
+.subtitulo_contacto{
+
+    font-size:16px;
+
+}
+
+.descripcion_contacto{
+
+    font-size:14px;
+
+}
+
+.info-contacto h2,
+.contacto-derecha h2,
+.titulo-faq{
+
+    font-size:22px;
+
+}
+
+.item-info{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.item-info img{
+
+    width:45px;
+    height:45px;
+
+}
+
+.icono-envio{
+
+    width:60px !important;
+    height:60px !important;
+
+}
+
+.faq-item summary{
+
+    font-size:15px;
+
+}
+
+.faq-respuesta{
+
+    font-size:14px;
+
+}
+
+.texto-beneficio h3{
+
+    font-size:18px;
+
+}
+
+.texto-beneficio p{
+
+    font-size:14px;
+
+}
+
+.icono-beneficio{
+
+    width:60px;
+    height:60px;
+
+}
+
+.icono-beneficio img{
+
+    width:32px;
+
+}
+
+.footer-item{
+
+    flex-direction:column;
+
+}
+
+.redes{
+
+    justify-content:center;
+
+}
+
+}
